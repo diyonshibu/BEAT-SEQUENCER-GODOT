@@ -1,0 +1,141 @@
+[gd_scene format=3 uid="uid://cke4q8gvob53b"]
+
+[ext_resource type="Script" uid="uid://dlw3s0m55eall" path="res://node_2d.gd" id="1_ig7tw"]
+[ext_resource type="AudioStream" uid="uid://d1lgapd7omho" path="res://Kick_Progressive_10.wav" id="2_1bvp3"]
+[ext_resource type="AudioStream" uid="uid://bw4fdp17x0pe1" path="res://Snare_10.wav" id="3_lquwl"]
+[ext_resource type="AudioStream" uid="uid://dp6wcpfojek0r" path="res://Hihat_05.wav" id="4_7mycd"]
+[ext_resource type="AudioStream" uid="uid://yoaeh5k7sxk3" path="res://tom_s30.wav" id="5_5vw27"]
+[ext_resource type="AudioStream" uid="uid://bi3hs0nvrv6y6" path="res://Ride_10.wav" id="5_lquwl"]
+[ext_resource type="AudioStream" uid="uid://d34otfm81w2v8" path="res://tom_s4.wav" id="6_kek77"]
+[ext_resource type="AudioStream" uid="uid://cbn1dhajo6uot" path="res://Clap_7.wav" id="7_4c57u"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_1bvp3"]
+
+[sub_resource type="SystemFont" id="SystemFont_1bvp3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lquwl"]
+font = SubResource("SystemFont_1bvp3")
+font_size = 30
+
+[node name="Main" type="Node2D" unique_id=297806373]
+script = ExtResource("1_ig7tw")
+
+[node name="UI" type="Control" parent="." unique_id=813923606]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Steps" type="GridContainer" parent="UI" unique_id=106217245]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+columns = 16
+
+[node name="KickLabel" type="Label" parent="UI" unique_id=1085298119]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "KICK
+"
+
+[node name="SnareLabel" type="Label" parent="UI" unique_id=1831290724]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Snare
+"
+
+[node name="HiHatLabel" type="Label" parent="UI" unique_id=732938308]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "HiHat"
+
+[node name="Title" type="Label" parent="UI" unique_id=1494229462]
+material = SubResource("CanvasItemMaterial_1bvp3")
+layout_mode = 0
+offset_left = 466.0
+offset_top = 77.0
+offset_right = 698.0
+offset_bottom = 166.0
+text = "DIYONS DAW"
+label_settings = SubResource("LabelSettings_lquwl")
+vertical_alignment = 1
+
+[node name="StartStopButton" type="Button" parent="UI" unique_id=598172983]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Start/Stop"
+
+[node name="BPMSlider" type="HSlider" parent="UI" unique_id=752255959]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 16.0
+min_value = 60.0
+max_value = 180.0
+value = 120.0
+
+[node name="BPMLabel" type="Label" parent="UI" unique_id=452815922]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Tom1Label" type="Label" parent="UI" unique_id=86269239]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Tom 1"
+
+[node name="Tom2Label" type="Label" parent="UI" unique_id=699085718]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Tom 2"
+
+[node name="ClapLabel" type="Label" parent="UI" unique_id=1262705462]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Clap"
+
+[node name="RideLabel" type="Label" parent="UI" unique_id=1254112494]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Ride"
+
+[node name="Timer" type="Timer" parent="." unique_id=533364410]
+wait_time = 0.125
+autostart = true
+
+[node name="Kick" type="AudioStreamPlayer2D" parent="." unique_id=1090684926]
+stream = ExtResource("2_1bvp3")
+volume_db = -15.065
+
+[node name="Snare" type="AudioStreamPlayer2D" parent="." unique_id=822964684]
+stream = ExtResource("3_lquwl")
+volume_db = -15.065
+
+[node name="HiHat" type="AudioStreamPlayer2D" parent="." unique_id=2077475828]
+stream = ExtResource("4_7mycd")
+volume_db = -15.065
+
+[node name="Tom1" type="AudioStreamPlayer2D" parent="." unique_id=1730031359]
+stream = ExtResource("5_5vw27")
+volume_db = -10.4
+
+[node name="Tom2" type="AudioStreamPlayer2D" parent="." unique_id=1094231962]
+stream = ExtResource("6_kek77")
+volume_db = -20.8
+
+[node name="Clap" type="AudioStreamPlayer2D" parent="." unique_id=1428895104]
+stream = ExtResource("7_4c57u")
+volume_db = -15.467
+
+[node name="Ride" type="AudioStreamPlayer2D" parent="." unique_id=2037528611]
+stream = ExtResource("5_lquwl")
+volume_db = -12.6
