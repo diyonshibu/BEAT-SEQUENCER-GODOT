@@ -16,9 +16,8 @@ This is my creative coding project. It is a step sequencer built using Godot. It
 * Real-time playback system
 * Start / Stop control
 * Adjustable BPM (tempo slider)
-* Visual step highlighting (playhead)
 * Colour-coded tracks for clarity
-* Responsive UI with automatic centering
+  
 ## 🧠 How It Works
 
 Step Sequencer Logic
