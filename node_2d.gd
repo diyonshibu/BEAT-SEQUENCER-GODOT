@@ -15,7 +15,6 @@ var current_step = 0
 #here i am using a boolean variable to check if the sequencer is playing or not
 var is_playing = false 
 
-#UI elements 
 #here i am getting the steps grid 
 @onready var steps_container = $UI/Steps
 #here im getting the timer which controls the bpm 
@@ -30,7 +29,6 @@ var is_playing = false
 @onready var bpm_label = $UI/BPMLabel
 
 
-# Audio samples
 #here i am calling the neccessary samples for each instrument 
 @onready var kick = $Kick #kick
 @onready var snare = $Snare #snare
